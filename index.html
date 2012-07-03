@@ -4,26 +4,28 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<script src="./jquery-1.7.2.min.js"></script>
+	<style>
+	 .font36 {
+  	 font-size: 36px;
+	 }
+	</style>
 </head>
 <body>
 	<h1>jQueryの練習</h1>
 	<ul>
-	  <li>1</li>
-	  <li>2</li>
-	  <li>3</li>
-	  <li>4</li>
-	  <li>5</li>
-	  <li>6</li>
-	  <li>7</li>
-	  <li>8</li>
-	  <li>9</li>
-	  <li>10</li>
+	  <li class="listitem">1</li>
+	  <li class="listitem">2</li>
+	  <li class="listitem">3</li>
+	  <li class="listitem">4</li>
+	  <li class="listitem">5</li>
 	</ul>
+	<input type="text" name="" id="" value="ねこ"/>
 	<script>
   	$(document).ready(function() {
-    	$('li').css({'border' : '1px solid #cbd',
-    	             'font-size': '90%',
-    	             'width': '80px'});
+    	$('li').css('color', 'gray');
+    	$('li').addClass('font36');
+    	$('li').removeClass('font36');
+    	$('input').val('ぬこ');
   	});
 	</script>
 </body>
