@@ -21,15 +21,16 @@
 	</ul>
 	<input type="text" name="" id="" value="ねこ"/>
 	<script>
-  	$(document).ready(function() {
-    	$('li').css('color', 'gray');
-    	$('li').addClass('font36');
-    	$('li').removeClass('font36');
-    	$('input').val('ぬこ');
-    	$('.listitem').click(function() {
-    	   $(this).css('color', 'blue');
-    	 });
-  	});
+  	$(function() {
+    	$('.listitem').toggle(
+    	   function() {
+      	   $(this).css('color', 'blue');
+    	   },
+    	   function() {
+      	   $(this).css('color', 'black');
+    	   }
+    	)
+  	};)
 	</script>
 </body>
 </html>
