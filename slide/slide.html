@@ -4,104 +4,15 @@
   <meta charset="UTF-8">
   <title></title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      var currentPosition = 0;
-      var slideWidth = 650;
-      var slides = $('.slide');
-      var numberOfSlides = slides.length;
-      var slideShowInterval;
-      var speed = 3000;
-
-      slideShowInterval = setInterval(changePosition, speed);
-
-      slides.wrapAll('<div id="slidesHolder"></div>');
-
-      slides.css('float', 'left');
-
-      $('#slidesHolder').css('width', slideWidth * numberOfSlides);
-
-      for(var i = 0; i < numberOfSlides; i++){ $('#switch').append('<div class="box">&nbsp;</div>')}
-
-      function changePosition(){
-        if(currentPosition == numberOfSlides - 1){
-          currentPosition = 0;
-        }else{
-          currentPosition++;
-        }
-        moveSlide();
-        moveActiveSwitch();
-      }
-
-      function moveSlide() {
-        $('#slidesHolder').animate({'marginLeft': slideWidth * (-currentPosition)});
-      }
-      
-      function moveActiveSwitch(){
-       $('.box').eq(currentPosition).css('background', 'black').siblings('div').css('background', 'silver');
-      }
-    });
-  </script>
-  <style>
-    div {
-      width: 650px;
-      height: 250px;
-    }
-    .slide {
-      /*
-      width: 100px;
-      height: 100px;
-      */
-      background: silver;
-      float: left;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      float: left;
-    }
-    #wrap {
-      /*
-      width: 100px;
-      height: 100px;
-      */
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      position: relative;
-    }
-    .black {
-      background: black;
-    }
-    .gray {
-      background: gray;
-    }
-    .silver {
-      background: silver;
-    }
-    #switch div {
-      width: 10px;
-      height: 10px;
-      margin: 10px;
-      display: inline-block;
-      background: silver;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="slide2.js"></script>
 </head>
 <body>
 <div id="wrap">
-  <div class="slide black"></div>
-  <div class="slide gray"></div>
-  <div class="slide silver"></div>
-  <div class="slide black"></div>
-  <div class="slide gray"></div>
-  <div class="slide silver"></div>
-  <div class="slide black"></div>
-  <div class="slide gray"></div>
-  <div class="slide silver"></div>
-  <div class="slide black"></div>
-  <div class="slide gray"></div>
-  <div class="slide silver"></div>
-  <img src="image/bakeneko.png" />   bakeneko_1.png bakeneko_2.png bakeneko_e.png bakeneko_s.png hogecon.gif
+  <img src="image/bakeneko.png" />
+  <img src="image/bakeneko_1.png" alt="" />
+  <img src="image/bakeneko_2.png" alt="" />
+  <img src="image/hogecon.gif" alt="" style="width: 150px; height: 150px;"/>
 </div>
 <div id="switch"></div>
 </body>
