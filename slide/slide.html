@@ -5,15 +5,27 @@
   <title></title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css" />
+  <!--
   <script src="slide2.js"></script>
+  -->
 </head>
 <body>
-<div id="wrap">
+<div id="breadcrumb"></div>
+<div id="slideshow">
   <img src="image/bakeneko.png" />
   <img src="image/bakeneko_1.png" alt="" />
   <img src="image/bakeneko_2.png" alt="" />
-  <img src="image/hogecon.gif" alt="" style="width: 150px; height: 150px;"/>
 </div>
 <div id="switch"></div>
+<script>
+  var items = location.pathname.substr(1).split('/');
+  var breadcrumbTrail = '';
+  for(var i = 0; i < items.length; i++){
+    breadcrumbTrail += '&nbsp;->&nbsp;' + items[i];
+  }
+
+  (breadcrumb = document.createElement('p')).innerHTML = breadcrumbTrail;
+  document.getElementById('breadcrumb').appendChild(breadcrumb);
+</script>
 </body>
 </html>
