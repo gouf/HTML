@@ -2,7 +2,6 @@ $(document).ready(function(){
 
   var slide = new Slide;
   slide.setSize($('#wrap img').length);
-  slide.setSpeed(6000);
   slide.setWidth(300);
   slide.setParent($('#wrap'));
   slide.setNodes($('#wrap img'));
@@ -21,22 +20,17 @@ var Slide = function(){
   _currentPosition = 0;
   _width = 0;
   _size = 0;
-  _parent = '';
-  _nodes = '';
+  _slideWindowID = '';
+  _imgElements = '';
   /*
   var slides;
-  var speed = 3000;
   var size = 0;
   //*/
 
-  this.getWidth = function(){return _width;}
-  this.setWidth = function(width){_width = width;}
   this.getCurrentPosition = function(){return _currentPosition;}
   this.setCurrentPosition = function(currentPosition){_currentPosition = currentPosition;}
   this.getSize = function(){return _size;}
   this.setSize = function(size){_size = size;}
-  this.getSpeed = function(){return _speed;}
-  this.setSpeed = function(speed){_speed = speed;}
   this.getParent = function(){return _parent;}
   this.setParent = function(parent){_parent = parent;}
   this.getNodes = function(){return _nodes;}
