@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery crossFader - jQuery plugin</title>
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<style type="text/css">
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+<script src="slideshow.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    /*
+    $('#slideshowWindow').slideshow(464);
+    $('#slideshowWindow2').slideshow(464);
+    //*/
+    $('#slideshowWindow').slideshow(464, 1800);
+    $('#slideshowWindow2').slideshow(464, 2500);
+});
+</script>
+
+</head>
+<body>
+	<div id="slideshowWindow">
+        <img src="index_201109_01.png" alt ="index_201109_01" />
+        <img src="index_201109_03.png" alt="" />
+        <img src="index_2012cf1_06.jpg" alt ="index_201109_03" />
+        <img src="index_2012cf2_06.jpg" alt ="index_201109_03" />
+        <img src="index_2012cf2_07.jpg" alt="" />
+  </div>
+	<div id="slideshowWindow2">
+        <img src="index_201109_01.png" alt ="index_201109_01" />
+        <img src="index_2012cf1_06.jpg" alt ="index_201109_03" />
+        <img src="index_2012cf2_06.jpg" alt ="index_201109_03" />
+  </div>
+</body>
+</html>

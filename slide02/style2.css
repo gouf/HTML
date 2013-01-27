@@ -1,0 +1,52 @@
+#slideshowWindow2, 
+#slideshowWindow {
+	width: 464px;
+  height: auto;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+#slideshowWindow2 .slide,
+#slideshowWindow .slide {
+	margin: 0;
+	padding: 0;
+	width: 464px;
+	height: 209px;
+	float: left;
+	position: relative;
+}
+
+.switches {
+    width: 100%;
+}
+.switchWrap{
+    text-align: center;
+}
+.switch {
+	width: 13px;
+	height: 13px;
+	margin: 0.5%;
+	background: silver;
+  float: none;
+	display: inline-block;
+}
+
+.arrow_switch > * {
+    border:thin solid #BFBFBF;
+    display: inline-block;
+}
+
+.buttonLeft, .buttonRight {
+    width: 48%;
+}
+.buttonRight {
+    text-align: right;
+    border-left: none;
+    padding-right: 1%;
+}
+
+.buttonLeft {
+    padding-left: 1%;
+}
